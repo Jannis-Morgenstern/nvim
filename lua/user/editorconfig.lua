@@ -1,0 +1,5 @@
+-- vim.api.nvim_command([[
+--   augroup _editorconfig
+--     autocmd BufEnter * :EditorConfigReload
+--   augroup END
+-- ]])
