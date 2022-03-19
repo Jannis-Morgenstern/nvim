@@ -43,6 +43,8 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua")
 	use("editorconfig/editorconfig-vim")
 	use("simrat39/rust-tools.nvim")
+	use("famiu/nvim-reload")
+
 	-- colorschemes
 	use("lunarvim/colorschemes")
 
