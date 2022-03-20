@@ -3,6 +3,8 @@ if not status_ok then
 	return
 end
 
+local Terminal = require("toggleterm.terminal").Terminal
+
 toggleterm.setup({
 	size = 20,
 	open_mapping = [[<C-\>]],
@@ -25,3 +27,11 @@ toggleterm.setup({
 		},
 	},
 })
+
+local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+
+function LazygitToggle()
+	lazygit:toggle()
+end
+
+vim.api.nvim_set_keymap("n", "<leader>\\", "<cmd>lua LazygitToggle()<CR>", { noremap = true, silent = true })
