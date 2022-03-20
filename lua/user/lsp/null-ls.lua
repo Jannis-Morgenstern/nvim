@@ -16,10 +16,8 @@ null_ls.setup({
 			extra_args = { "-i", "2", "-sr", "-s", "-ci" },
 		}),
 		formatting.rustfmt,
-		diagnostics.eslint,
 		diagnostics.shellcheck,
 		code_actions.shellcheck,
-		code_actions.eslint,
 	},
 	on_attach = function(client)
 		if client.resolved_capabilities.document_formatting then
