@@ -44,6 +44,7 @@ return packer.startup(function(use)
 	use("editorconfig/editorconfig-vim")
 	use("simrat39/rust-tools.nvim")
 	use("famiu/nvim-reload")
+	use("chrisbra/Colorizer")
 
 	-- colorschemes
 	use("lunarvim/colorschemes")

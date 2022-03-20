@@ -52,6 +52,10 @@ cmp.setup({
 		end,
 	},
 
+	completion = {
+		autocomplete = false,
+	},
+
 	mapping = {
 		["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
@@ -63,23 +67,23 @@ cmp.setup({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),
-		["<CR>"] = cmp.mapping.confirm({ select = true }),
-		["<Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif luasnip.expandable() then
-				luasnip.expand()
-			elseif luasnip.expand_or_jumpable() then
-				luasnip.expand_or_jump()
-			elseif check_backspace() then
-				fallback()
-			else
-				fallback()
-			end
-		end, {
-			"i",
-			"s",
-		}),
+		["<TAB>"] = cmp.mapping.confirm({ select = true }),
+		-- ["<Tab>"] = cmp.mapping(function(fallback)
+		-- 	if cmp.visible() then
+		-- 		cmp.select_next_item()
+		-- 	elseif luasnip.expandable() then
+		-- 		luasnip.expand()
+		-- 	elseif luasnip.expand_or_jumpable() then
+		-- 		luasnip.expand_or_jump()
+		-- 	elseif check_backspace() then
+		-- 		fallback()
+		-- 	else
+		-- 		fallback()
+		-- 	end
+		-- end, {
+		-- 	"i",
+		-- 	"s",
+		-- }),
 	},
 
 	formatting = {
@@ -87,9 +91,9 @@ cmp.setup({
 		format = function(entry, vim_item)
 			vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
 			vim_item.menu = ({
-				luasnip = "[Snippet]",
-				buffer = "[Buffer]",
-				path = "[Path]",
+				luasnip = "[SNIP]",
+				buffer = "[BUFF]",
+				path = "[PATH]",
 			})[entry.source.name]
 			return vim_item
 		end,
