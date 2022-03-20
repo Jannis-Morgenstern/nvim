@@ -67,7 +67,10 @@ return packer.startup(function(use)
 	use("b0o/schemastore.nvim")
 	use("tamago324/nlsp-settings.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
-
+	require("packer").use({
+		"weilbith/nvim-code-action-menu",
+		cmd = "CodeActionMenu",
+	})
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
