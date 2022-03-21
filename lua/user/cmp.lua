@@ -53,7 +53,7 @@ cmp.setup({
 	},
 
 	completion = {
-		autocomplete = false,
+		autocomplete = true,
 	},
 
 	mapping = {
