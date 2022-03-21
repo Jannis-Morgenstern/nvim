@@ -55,7 +55,7 @@ keymap("x", "K", ":move '>-2<CR>gv-gv", opts)
 keymap(
 	"n",
 	"<leader>f",
-	"<cmd> lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
+	"<cmd> lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false, hidden = true }))<CR>",
 	opts
 )
 keymap("n", "<c-t>", "<cmd> Telescope live_grep<CR>", opts)
