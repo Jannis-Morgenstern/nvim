@@ -25,5 +25,9 @@ lsp_installer.on_server_ready(function(server)
 		opts = vim.tbl_deep_extend("force", rust_analyzer_opts, opts)
 	end
 
+	if server.name == "stylelint_lsp" then
+		local stylelint_lsp_opts = require("user.lsp.settings.stylelint_lsp")
+		opts = vim.tbl_deep_extend("force", stylelint_lsp_opts, opts)
+	end
 	server:setup(opts)
 end)
