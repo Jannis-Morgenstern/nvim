@@ -6,4 +6,9 @@ return {
 			enable = true,
 		},
 	},
+	filetypes = {
+		"css",
+		"less",
+		"scss",
+	},
 }
