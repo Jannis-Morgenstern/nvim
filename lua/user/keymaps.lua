@@ -52,10 +52,14 @@ keymap("x", "K", ":move '>-2<CR>gv-gv", opts)
 -- keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Telescope
-keymap(
-	"n",
-	"<leader>f",
-	"<cmd> lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false, hidden = true }))<CR>",
-	opts
-)
+-- keymap(
+-- 	"n",
+-- 	"<leader>f",
+-- 	"<cmd> lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false, hidden = true }))<CR>",
+-- 	opts
+-- )
+keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
 keymap("n", "<c-t>", "<cmd> Telescope live_grep<CR>", opts)
+
+-- NvimTree
+keymap("n", "<leader>r", "<cmd>NvimTreeRefresh<cr>", opts)
