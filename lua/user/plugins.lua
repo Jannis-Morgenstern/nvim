@@ -73,6 +73,10 @@ return packer.startup(function(use)
 		cmd = "CodeActionMenu",
 	})
 	use("windwp/nvim-ts-autotag")
+	use("jose-elias-alvarez/nvim-lsp-ts-utils")
+	use({ "Fymyte/rasi.vim", ft = "rasi" })
+	use("pantharshit00/vim-prisma")
+
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
