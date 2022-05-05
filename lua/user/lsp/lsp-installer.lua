@@ -4,6 +4,15 @@ if not status_ok then
 	return
 end
 
+require("lspconfig").tsserver.setup({
+	on_attach = function(client, bufnr)
+		require("nvim-lsp-ts-utils").setup({
+			filter_out_diagnostics_by_code = { 80001 },
+		})
+		require("nvim-lsp-ts-utils").setup_client(client)
+	end,
+})
+
 lsp_installer.on_server_ready(function(server)
 	local opts = {
 		on_attach = require("user.lsp.handlers").on_attach,
