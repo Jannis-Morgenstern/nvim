@@ -72,6 +72,7 @@ return packer.startup(function(use)
 		"weilbith/nvim-code-action-menu",
 		cmd = "CodeActionMenu",
 	})
+	use("windwp/nvim-ts-autotag")
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
