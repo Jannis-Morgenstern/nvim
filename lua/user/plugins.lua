@@ -76,6 +76,7 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/nvim-lsp-ts-utils")
 	use({ "Fymyte/rasi.vim", ft = "rasi" })
 	use("pantharshit00/vim-prisma")
+	use("github/copilot.vim")
 
 	-- Treesitter
 	use({
