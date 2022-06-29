@@ -72,7 +72,6 @@ return packer.startup(function(use)
 		"weilbith/nvim-code-action-menu",
 		cmd = "CodeActionMenu",
 	})
-	use("windwp/nvim-ts-autotag")
 	use("jose-elias-alvarez/nvim-lsp-ts-utils")
 	use({ "Fymyte/rasi.vim", ft = "rasi" })
 	use("pantharshit00/vim-prisma")
@@ -84,8 +83,9 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
-	use("p00f/nvim-ts-rainbow")
-	use("JoosepAlviste/nvim-ts-context-commentstring")
+  use("windwp/nvim-ts-autotag")
+	-- use("p00f/nvim-ts-rainbow")
+	-- use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
