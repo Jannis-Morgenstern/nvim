@@ -67,8 +67,8 @@ nvim_tree.setup({
       add_trailing = false,
       group_empty = false,
       full_name = true,
-      highlight_git = true,
-      highlight_opened_files = "all",
+      highlight_git = false,
+      highlight_opened_files = "name",
       root_folder_modifier = ":~",
       indent_markers = {
         enable = true,
@@ -111,14 +111,7 @@ glyphs = {
  				},
  			},
       },
-      special_files = {
-        "Cargo.toml",
-        "package.json",
-        "project.json",
-        "Makefile",
-        "README.md",
-        "readme.md",
-      },
+      special_files = {},
     },
   filters = {
     dotfiles = false,
