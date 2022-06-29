@@ -14,3 +14,6 @@ require("user.toggleterm")
 require("user.lualine")
 require("user.editorconfig")
 require("user.rust-tools")
+
+vim.g["neovide_cursor_animation_length"] = 0
+vim.opt.guifont = {"monospace", "h20"}

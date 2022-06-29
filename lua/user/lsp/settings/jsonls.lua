@@ -47,6 +47,7 @@ local schemas = {
 			".prettierrc",
 			".prettierrc.json",
 			"prettier.config.json",
+      ".prettierrc.cjs",
 		},
 		url = "https://json.schemastore.org/prettierrc",
 	},
