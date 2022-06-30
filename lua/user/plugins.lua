@@ -38,7 +38,10 @@ return packer.startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use("nvim-telescope/telescope.nvim")
 	use("windwp/nvim-autopairs")
+  -- comments
 	use("numToStr/Comment.nvim")
+  use("JoosepAlviste/nvim-ts-context-commentstring")
+
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
 	use("editorconfig/editorconfig-vim")
@@ -85,7 +88,6 @@ return packer.startup(function(use)
 	})
   use("windwp/nvim-ts-autotag")
 	-- use("p00f/nvim-ts-rainbow")
-	-- use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
