@@ -63,3 +63,6 @@ keymap("n", "<c-t>", "<cmd> Telescope live_grep<CR>", opts)
 
 -- NvimTree
 keymap("n", "<leader>r", "<cmd>NvimTreeRefresh<cr>", opts)
+
+-- bufferline
+keymap("n", "<leader>bp", "<cmd>BufferLinePick<cr>", opts)
