@@ -48,7 +48,6 @@ local function lsp_keymaps(bufnr)
 end
 
 local lsp_formatting = function(bufnr)
-	print("formatting ...")
 	vim.lsp.buf.format({
 		filter = function(client)
 			return client.name == "null-ls"
