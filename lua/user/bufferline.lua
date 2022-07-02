@@ -1,5 +1,8 @@
 local bufferline = require("bufferline")
 local icons = require("user.icons")
+local colors = require("user.colors")
+
+local asd = 1
 
 bufferline.setup({
 	options = {
@@ -48,22 +51,31 @@ bufferline.setup({
 				local hint = #vim.diagnostic.get(0, { severity = seve.HINT })
 
 				if error ~= 0 then
-					table.insert(result, { text = " " .. icons.diagnostics.error .. " " .. error, guifg = "#EC5241" })
-				end
-
-				if warning ~= 0 then
 					table.insert(
 						result,
-						{ text = " " .. icons.diagnostics.warning .. " " .. warning, guifg = "#EFB839" }
+						{ text = " " .. icons.diagnostics.error .. " " .. error, guifg = colors.diagnostics.error }
 					)
 				end
 
+				if warning ~= 0 then
+					table.insert(result, {
+						text = " " .. icons.diagnostics.warning .. " " .. warning,
+						guifg = colors.diagnostics.warning,
+					})
+				end
+
 				if hint ~= 0 then
-					table.insert(result, { text = " " .. icons.diagnostics.hint .. " " .. hint, guifg = "#A3BA5E" })
+					table.insert(
+						result,
+						{ text = " " .. icons.diagnostics.hint .. " " .. hint, guifg = colors.diagnostics.hint }
+					)
 				end
 
 				if info ~= 0 then
-					table.insert(result, { text = " " .. icons.diagnostics.info .. " " .. info, guifg = "#7EA9A7" })
+					table.insert(
+						result,
+						{ text = " " .. icons.diagnostics.info .. " " .. info, guifg = colors.diagnostics.info }
+					)
 				end
 				return result
 			end,

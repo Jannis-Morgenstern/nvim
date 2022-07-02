@@ -1,4 +1,7 @@
 local nvim_tree = require("nvim-tree")
+local icons = require("user.icons")
+
+local asd = 1
 
 nvim_tree.setup({
 	disable_netrw = true,
@@ -32,10 +35,10 @@ nvim_tree.setup({
 		enable = true,
 		show_on_dirs = true,
 		icons = {
-			error = "",
-			warning = "",
-			info = "",
-			hint = "ﳗ",
+			error = icons.diagnostics.error,
+			warning = icons.diagnostics.warning,
+			info = icons.diagnostics.info,
+			hint = icons.diagnostics.hint,
 		},
 	},
 	git = {
