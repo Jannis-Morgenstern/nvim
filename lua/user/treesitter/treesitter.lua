@@ -7,4 +7,8 @@ treesitter_configs.setup({
 	indent = {
 		enable = true,
 	},
+	rainbow = {
+		enable = true,
+		extended_mode = false,
+	},
 })

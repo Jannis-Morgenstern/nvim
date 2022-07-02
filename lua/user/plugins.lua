@@ -39,6 +39,7 @@ return packer.startup(function(use)
 	-- Utils
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
+	use("famiu/bufdelete.nvim")
 
 	-- Fuzzy Finder
 	use("nvim-telescope/telescope.nvim")
@@ -83,6 +84,7 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 	use("windwp/nvim-ts-autotag")
+	use("p00f/nvim-ts-rainbow")
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
