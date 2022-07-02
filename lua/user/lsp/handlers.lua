@@ -45,6 +45,10 @@ local function lsp_keymaps(bufnr)
 	vim.keymap.set("n", "gr", vim.lsp.buf.rename, opts)
 	vim.keymap.set("n", "gdn", vim.diagnostic.goto_next, opts)
 	vim.keymap.set("n", "gdN", vim.diagnostic.goto_prev, opts)
+	vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
+	vim.keymap.set("n", "ga", function()
+		vim.api.nvim_command("CodeActionMenu")
+	end, opts)
 end
 
 local lsp_formatting = function(bufnr)

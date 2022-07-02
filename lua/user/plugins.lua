@@ -67,6 +67,10 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp")
 	use("onsails/lspkind.nvim")
 	use("f3fora/cmp-spell")
+	use({
+		"weilbith/nvim-code-action-menu",
+		cmd = "CodeActionMenu",
+	})
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip")
