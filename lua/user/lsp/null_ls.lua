@@ -8,7 +8,7 @@ null_ls.setup({
 	sources = {
 		formatting.stylua,
 		formatting.prettierd,
-		diagnostics.eslint,
+		diagnostics.eslint_d,
 	},
 	on_attach = handlers.on_attach,
 })
