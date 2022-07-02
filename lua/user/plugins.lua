@@ -33,26 +33,26 @@ packer.init({
 })
 
 return packer.startup(function(use)
-  -- Package Manager
+	-- Package Manager
 	use("wbthomason/packer.nvim")
 
-  -- Utils
+	-- Utils
 	use("nvim-lua/popup.nvim")
 	use("nvim-lua/plenary.nvim")
 
-  -- Fuzzy Finder
+	-- Fuzzy Finder
 	use("nvim-telescope/telescope.nvim")
 
-  -- Misc
+	-- Misc
 	use("windwp/nvim-autopairs")
 	use("kyazdani42/nvim-web-devicons")
 
-  -- File Explorer
+	-- File Explorer
 	use("kyazdani42/nvim-tree.lua")
 
-  -- Comments
+	-- Comments
 	use("numToStr/Comment.nvim")
-  use("JoosepAlviste/nvim-ts-context-commentstring")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Colorschemes
 	use("lunarvim/colorschemes")
@@ -64,8 +64,8 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-cmdline")
 	use("saadparwaiz1/cmp_luasnip")
 	use("hrsh7th/cmp-nvim-lsp")
-  use("onsails/lspkind.nvim")
-  use("f3fora/cmp-spell")
+	use("onsails/lspkind.nvim")
+	use("f3fora/cmp-spell")
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip")
@@ -74,13 +74,14 @@ return packer.startup(function(use)
 	-- LSP
 	use("neovim/nvim-lspconfig")
 	use("williamboman/nvim-lsp-installer")
+	use("jose-elias-alvarez/null-ls.nvim")
 
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
-  use("windwp/nvim-ts-autotag")
+	use("windwp/nvim-ts-autotag")
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
