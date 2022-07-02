@@ -60,6 +60,8 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-cmdline")
 	use("saadparwaiz1/cmp_luasnip")
 	use("hrsh7th/cmp-nvim-lsp")
+  use("onsails/lspkind.nvim")
+  use("f3fora/cmp-spell")
 
 	-- snippets
 	use("L3MON4D3/LuaSnip")

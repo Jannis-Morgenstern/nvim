@@ -32,3 +32,5 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.iskeyword:append("-")
 vim.opt.termguicolors = true
+vim.opt.spell = false
+vim.opt.spelllang = { "en_us" }

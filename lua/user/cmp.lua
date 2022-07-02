@@ -24,6 +24,7 @@ cmp.setup({
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    { name = "spell" },
   }),
   formatting = {
     fields = {"kind", "abbr", "menu"},
@@ -33,7 +34,8 @@ cmp.setup({
         nvim_lsp = "[LSP]",
         luasnip = "[SNIP]",
         buffer = "[BUF]",
-        path = "[PATH]"
+        path = "[PATH]",
+        spell = "[SPEL]",
       }
     }),
   },
