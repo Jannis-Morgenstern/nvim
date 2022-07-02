@@ -5,13 +5,13 @@ local lspkind = require("lspkind")
 cmp.setup({
   snippet = {
     expand = function(args)
-      luasnip.expand_body(args.body)
+      luasnip.lsp_expand(args.body)
     end,
   },
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
-  },  
+  },
   mapping = cmp.mapping.preset.insert({
     ["<C-j>"] = cmp.mapping.select_next_item(),
     ["<C-k>"] = cmp.mapping.select_prev_item(),
@@ -27,7 +27,7 @@ cmp.setup({
     { name = "spell" },
   }),
   formatting = {
-    fields = {"kind", "abbr", "menu"},
+    fields = { "kind", "abbr", "menu" },
     format = lspkind.cmp_format({
       mode = "symbol",
       menu = {
