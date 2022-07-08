@@ -1,5 +1,5 @@
 local nvim_tree = require("nvim-tree")
-local icons = require("user.icons")
+local icons = require("nyarthan.icons")
 
 nvim_tree.setup({
 	disable_netrw = true,

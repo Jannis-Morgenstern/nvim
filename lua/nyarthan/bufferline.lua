@@ -1,6 +1,6 @@
 local bufferline = require("bufferline")
-local icons = require("user.icons")
-local colors = require("user.colors")
+local icons = require("nyarthan.icons")
+local colors = require("nyarthan.colors")
 
 local asd = 1
 

@@ -1,5 +1,5 @@
 local lsp_colors = require("lsp-colors")
-local colors = require("user.colors")
+local colors = require("nyarthan.colors")
 
 lsp_colors.setup({
 	Error = colors.diagnostics.error,

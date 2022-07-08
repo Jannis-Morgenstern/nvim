@@ -1,5 +1,5 @@
 local null_ls = require("null-ls")
-local handlers = require("user.lsp.handlers")
+local handlers = require("nyarthan.lsp.handlers")
 
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics

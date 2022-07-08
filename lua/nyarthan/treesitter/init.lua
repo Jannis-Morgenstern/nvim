@@ -12,3 +12,5 @@ treesitter_configs.setup({
 		extended_mode = false,
 	},
 })
+
+require("nyarthan.treesitter.autotag")

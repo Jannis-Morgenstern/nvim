@@ -1,5 +1,5 @@
 local installer = require("nvim-lsp-installer")
-local handlers = require("user.lsp.handlers")
+local handlers = require("nyarthan.lsp.handlers")
 
 installer.setup({
 	automatic_installation = true,
@@ -40,7 +40,7 @@ for _, server in pairs(servers) do
 	}
 
 	if server == "sumneko_lua" then
-		local _opts = require("user.lsp.settings.sumneko_lua")
+		local _opts = require("nyarthan.lsp.settings.sumneko_lua")
 		opts = vim.tbl_deep_extend("force", _opts, opts)
 	end
 
