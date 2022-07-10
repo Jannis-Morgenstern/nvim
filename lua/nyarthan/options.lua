@@ -32,3 +32,7 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.iskeyword:append("-")
 vim.opt.termguicolors = true
+vim.opt.spell = false
+vim.opt.spelllang = { "en_us" }
+vim.opt.guifont = { "monospace", ":h11" }
+vim.g.neovide_cursor_animation_length = 0.03
