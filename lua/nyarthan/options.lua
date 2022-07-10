@@ -34,3 +34,4 @@ vim.opt.iskeyword:append("-")
 vim.opt.termguicolors = true
 vim.opt.spell = false
 vim.opt.spelllang = { "en_us" }
+vim.opt.guifont = { "monospace", ":h11" }
