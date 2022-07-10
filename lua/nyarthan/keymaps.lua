@@ -1,68 +1,53 @@
-local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
-
--- Leader Space
-keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Modes
--- normal: n
--- insert: i
--- visual: v
--- visual_block: x
--- term: t
--- command: cq
+local key = U.make_key({ noremap = true, silent = true })
 
--- Normal Mode
+key("", "<space>", "<nop>")
+
 -- Split navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+key("n", "<c-h>", "<c-w>h")
+key("n", "<c-j>", "<c-w>j")
+key("n", "<c-k>", "<c-w>k")
+key("n", "<c-l>", "<c-w>l")
 
 -- Tree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+key("n", "<leader>e", U.make_cmd("NvimTreeToggle"))
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize +2<CR>", opts)
-keymap("n", "<C-Down>", ":resize -2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+key("n", "<c-up>", U.make_cmd("resize +2"))
+key("n", "<c-down>", U.make_cmd("resize -2"))
+key("n", "<c-left>", U.make_cmd("vertical resize -2"))
+key("n", "<c-Right>", U.make_cmd("vertical resize +2"))
 
 -- buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<C-w>", ":Bdelete<CR>", opts) -- from plugin: bufdelete.nvim
+key("n", "<s-l>", U.make_cmd("bnext"))
+key("n", "<s-h>", U.make_cmd("bprevious"))
+key("n", "<c-w>", U.make_cmd("Bdelete"))
 -- Insert Mode
-keymap("i", "jk", "<ESC>", opts)
+key("i", "jk", "<esc>")
 
 -- Visual Mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+key("v", "<", "<gv")
+key("v", ">", ">gv")
 
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-1<CR>==", opts)
-keymap("v", "p", '"_nP', opts)
+key("v", "<a-j>", U.make_cmd("m .+1<cr>=="))
+key("v", "<a-k>", U.make_cmd("m .-1<cr>=="))
+key("v", "p", '"_nP')
 
 -- Visual Blocke Mode
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '>-2<CR>gv-gv", opts)
--- keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", otps)
--- keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+key("x", "J", U.make_cmd("move '>+1<CR>gv-gv"))
+key("x", "K", U.make_cmd("move '>-2<CR>gv-gv"))
+key("x", "<a-j>", U.make_cmd("move '>+1<CR>gv-gv"))
+key("x", "<a-k>", U.make_cmd("move '<-2<CR>gv-gv"))
 
 -- Telescope
--- keymap(
--- 	"n",
--- 	"<leader>f",
--- 	"<cmd> lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false, hidden = true }))<CR>",
--- 	opts
--- )
-keymap("n", "<leader>f", "<cmd>Telescope find_files<CR>", opts)
-keymap("n", "<c-t>", "<cmd> Telescope live_grep<CR>", opts)
+
+key("n", "<leader>f", U.make_cmd("Telescope find_files"))
+key("n", "<c-t>", U.make_cmd("Telescope live_grep"))
 
 -- NvimTree
-keymap("n", "<leader>r", "<cmd>NvimTreeRefresh<cr>", opts)
+key("n", "<leader>r", U.make_cmd("NvimTreeRefresh"))
 
 -- bufferline
-keymap("n", "<leader>bp", "<cmd>BufferLinePick<cr>", opts)
+key("n", "<leader>bp", U.make_cmd("BufferLinePick"))

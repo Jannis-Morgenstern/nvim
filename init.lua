@@ -1,5 +1,4 @@
 require("nyarthan.utils")
-
 require("nyarthan.options")
 require("nyarthan.keymaps")
 require("nyarthan.plugins")
