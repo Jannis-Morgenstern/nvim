@@ -71,6 +71,7 @@ return packer.startup(function(use)
 		"weilbith/nvim-code-action-menu",
 		cmd = "CodeActionMenu",
 	})
+	use("folke/trouble.nvim")
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip")
