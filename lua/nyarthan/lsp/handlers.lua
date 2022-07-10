@@ -1,4 +1,6 @@
 local icons = require("nyarthan.icons")
+local signature = require("lsp_signature")
+
 local M = {}
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -65,6 +67,12 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 M.on_attach = function(client, bufnr)
 	lsp_keymaps(bufnr)
+	-- signature.on_attach({
+	-- 	bind = true,
+	-- 	handler_opts = {
+	-- 		border = "rounded",
+	-- 	},
+	-- }, bufnr)
 
 	if client.supports_method("textDocument/formatting") then
 		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })

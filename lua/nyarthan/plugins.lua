@@ -72,6 +72,9 @@ return packer.startup(function(use)
 		cmd = "CodeActionMenu",
 	})
 	use("folke/trouble.nvim")
+	use({
+		"ray-x/lsp_signature.nvim",
+	})
 
 	-- Snippets
 	use("L3MON4D3/LuaSnip")
