@@ -51,3 +51,5 @@ key("n", "<leader>r", U.make_cmd("NvimTreeRefresh"))
 
 -- bufferline
 key("n", "<leader>bp", U.make_cmd("BufferLinePick"))
+
+key("n", "<leader>rr", U.make_cmd("luafile %"))

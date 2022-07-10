@@ -2,8 +2,6 @@ local bufferline = require("bufferline")
 local icons = require("nyarthan.icons")
 local colors = require("nyarthan.colors")
 
-local asd = 1
-
 bufferline.setup({
 	options = {
 		mode = "buffers",
@@ -11,7 +9,6 @@ bufferline.setup({
 		close_command = "bdelete! %d",
 		right_mouse_command = "bdelete! %d",
 		left_mouse_command = "buffer %d",
-		middle_mouse_command = nil,
 		indicator_icon = "▎",
 		buffer_close_icon = "",
 		modified_icon = "●",
@@ -29,7 +26,6 @@ bufferline.setup({
 		diagnostics_indicator = function(count)
 			return "(" .. count .. ")"
 		end,
-		custom_filter = nil,
 		offsets = { { filetype = "NvimTree", text = "File Explorer", padding = 1 } },
 		color_icons = true,
 		show_buffer_icons = true,
