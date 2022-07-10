@@ -1,5 +1,4 @@
 local icons = require("nyarthan.icons")
-local signature = require("lsp_signature")
 
 local M = {}
 

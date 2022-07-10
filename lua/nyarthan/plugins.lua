@@ -86,6 +86,7 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("folke/lsp-colors.nvim")
 	use("j-hui/fidget.nvim")
+	use("kosayoda/nvim-lightbulb")
 
 	-- Treesitter
 	use({
@@ -109,6 +110,7 @@ return packer.startup(function(use)
 
 	-- performance
 	use("lewis6991/impatient.nvim")
+	use("antoinemadec/FixCursorHold.nvim")
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
