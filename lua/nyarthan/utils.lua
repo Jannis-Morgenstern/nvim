@@ -7,3 +7,5 @@ U.bind = function(fn, args)
 end
 
 U.nv_cmd = vim.api.nvim_command
+
+U.key = vim.keymap.set

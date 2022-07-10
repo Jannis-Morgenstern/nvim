@@ -17,4 +17,4 @@ local function toggleLazygit()
 	lazygit:toggle()
 end
 
-vim.keymap.set("n", "<leader>tl", toggleLazygit)
+U.key("n", "<leader>tl", toggleLazygit)
