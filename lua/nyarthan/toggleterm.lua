@@ -14,16 +14,16 @@ toggleterm.setup({
 	},
 })
 
-local default = Terminal:new()
+local default = Terminal:new({})
 
 local lazygit = Terminal:new({ cmd = "lazygit" })
 
 local function toggleLazygit()
-	lazygit:toggle()
+	lazygit:toggle(1, "float")
 end
 
 local function toggleDefault()
-	default:toggle()
+	default:toggle(1, "float")
 end
 
 U.key("n", "<leader>tt", toggleDefault)
