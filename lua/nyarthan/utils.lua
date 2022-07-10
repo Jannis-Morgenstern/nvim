@@ -1,8 +1,9 @@
 U = {}
 
-U.bind = function(fn, args)
+U.bind = function(fn, ...)
+	local args = { ... }
 	return function()
-		return fn(args)
+		return fn(unpack(args))
 	end
 end
 
@@ -11,8 +12,7 @@ U.nv_cmd = vim.api.nvim_command
 U.key = vim.keymap.set
 
 U.D = function(...)
-	local args = { ... }
-	print(vim.inspect(unpack(args)))
+	print(vim.inspect(unpack({ ... })))
 end
 
 U.make_key = function(opts)
