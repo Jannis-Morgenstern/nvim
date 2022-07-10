@@ -1,3 +1,4 @@
+require("nyarthan.impatient")
 require("nyarthan.utils")
 require("nyarthan.options")
 require("nyarthan.keymaps")

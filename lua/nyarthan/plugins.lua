@@ -107,6 +107,9 @@ return packer.startup(function(use)
 	-- Status Line
 	use("nvim-lualine/lualine.nvim")
 
+	-- performance
+	use("lewis6991/impatient.nvim")
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
