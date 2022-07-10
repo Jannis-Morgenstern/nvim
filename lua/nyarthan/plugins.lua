@@ -85,6 +85,7 @@ return packer.startup(function(use)
 	use("williamboman/nvim-lsp-installer")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("folke/lsp-colors.nvim")
+	use("j-hui/fidget.nvim")
 
 	-- Treesitter
 	use({
