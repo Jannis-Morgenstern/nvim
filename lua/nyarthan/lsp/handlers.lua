@@ -1,4 +1,5 @@
 local icons = require("nyarthan.icons")
+local U = require("nyarthan.utils")
 
 M = {}
 
@@ -41,16 +42,14 @@ local function lsp_keymaps(bufnr)
 	vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
 	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 	vim.keymap.set("n", "gf", vim.lsp.buf.format, opts)
-	vim.keymap.set("n", "gR", "<cmd>Trouble lsp_references<cr>", opts)
-	vim.keymap.set("n", "gD", "<cmd>Trouble lsp_definitions<cr>", opts)
-	vim.keymap.set("n", "gT", "<cmd>Trouble lsp_type_definitions<cr>", opts)
+	vim.keymap.set("n", "gR", U.bind(U.nv_cmd, "Trouble lsp_references"), opts)
+	vim.keymap.set("n", "gD", U.bind(U.nv_cmd, "Trouble lsp_definitions"), opts)
+	vim.keymap.set("n", "gT", U.bind(U.nv_cmd, "Trouble lsp_type_definitions"), opts)
 	vim.keymap.set("n", "gr", vim.lsp.buf.rename, opts)
 	vim.keymap.set("n", "gdn", vim.diagnostic.goto_next, opts)
 	vim.keymap.set("n", "gdN", vim.diagnostic.goto_prev, opts)
 	vim.keymap.set("n", "gl", vim.diagnostic.open_float, opts)
-	vim.keymap.set("n", "ga", function()
-		vim.api.nvim_command("CodeActionMenu")
-	end, opts)
+	vim.keymap.set("n", "ga", U.bind(U.nv_cmd, "CodeActionMenu"), opts)
 end
 
 local lsp_formatting = function(bufnr)
