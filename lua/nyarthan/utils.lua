@@ -1,4 +1,4 @@
-local U = {}
+U = {}
 
 U.bind = function(fn, args)
 	return function()
@@ -7,5 +7,3 @@ U.bind = function(fn, args)
 end
 
 U.nv_cmd = vim.api.nvim_command
-
-return U
