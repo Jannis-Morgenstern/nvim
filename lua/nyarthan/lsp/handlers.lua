@@ -1,4 +1,5 @@
 local icons = require("nyarthan.icons")
+local keymaps = require("nyarthan.keymaps")
 
 local M = {}
 
@@ -33,26 +34,6 @@ M.setup = function()
 	})
 end
 
-local function lsp_keymaps(bufnr)
-	local opts = { buffer = bufnr }
-	local key = U.make_key(opts)
-
-	key("n", "gd", vim.lsp.buf.definition)
-	key("n", "gD", vim.lsp.buf.declaration)
-	key("n", "K", vim.lsp.buf.hover)
-	key("n", "<C-k>", vim.lsp.buf.signature_help)
-	key("n", "gi", vim.lsp.buf.implementation)
-	key("n", "gf", vim.lsp.buf.format)
-	key("n", "gR", U.make_cmd("Trouble lsp_references"))
-	key("n", "gD", U.make_cmd("Trouble lsp_definitions"))
-	key("n", "gT", U.make_cmd("Trouble lsp_type_definitions"))
-	key("n", "gr", vim.lsp.buf.rename)
-	key("n", "gdn", vim.diagnostic.goto_next)
-	key("n", "gdN", vim.diagnostic.goto_prev)
-	key("n", "gl", vim.diagnostic.open_float)
-	key("n", "ga", U.make_cmd("CodeActionMenu"))
-end
-
 local lsp_formatting = function(bufnr)
 	vim.lsp.buf.format({
 		filter = function(client)
@@ -65,13 +46,7 @@ end
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 M.on_attach = function(client, bufnr)
-	lsp_keymaps(bufnr)
-	-- signature.on_attach({
-	-- 	bind = true,
-	-- 	handler_opts = {
-	-- 		border = "rounded",
-	-- 	},
-	-- }, bufnr)
+	keymaps.set_keys.lsp(bufnr)
 
 	if client.supports_method("textDocument/formatting") then
 		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })

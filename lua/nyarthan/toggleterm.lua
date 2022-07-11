@@ -1,6 +1,8 @@
 local toggleterm = require("toggleterm")
 local Terminal = require("toggleterm.terminal").Terminal
 
+local M = {}
+
 toggleterm.setup({
 	shell = "fish",
 	direction = "float",
@@ -18,13 +20,12 @@ local default = Terminal:new({})
 
 local lazygit = Terminal:new({ cmd = "lazygit" })
 
-local function toggleLazygit()
+M.toggleLazygit = function()
 	lazygit:toggle(1, "float")
 end
 
-local function toggleDefault()
+M.toggleDefault = function()
 	default:toggle(1, "float")
 end
 
-U.key("n", "<leader>tt", toggleDefault)
-U.key("n", "<leader>tl", toggleLazygit)
+return M

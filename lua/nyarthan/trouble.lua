@@ -1,5 +1,6 @@
 local trouble = require("trouble")
 local icons = require("nyarthan.icons")
+local keymaps = require("nyarthan.keymaps")
 
 trouble.setup({
 	signs = {
@@ -13,8 +14,4 @@ trouble.setup({
 	auto_preview = true,
 })
 
-local opts = { silent = true, noremap = true }
-U.key("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", opts)
-U.key("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>", opts)
-U.key("n", "<leader>xl", "<cmd>Trouble loclist<cr>", opts)
-U.key("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", opts)
+keymaps.set_keys.trouble()
