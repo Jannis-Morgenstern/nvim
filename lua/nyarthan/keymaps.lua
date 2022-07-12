@@ -26,8 +26,6 @@ key("n", "<c-Right>", U.make_cmd("vertical resize +2"))
 key("n", "<s-l>", U.make_cmd("bnext"))
 key("n", "<s-h>", U.make_cmd("bprevious"))
 key("n", "<c-w>", U.make_cmd("Bdelete"))
--- Insert Mode
-key("i", "jk", "<esc>")
 
 -- Visual Mode
 key("v", "<", "<gv")
