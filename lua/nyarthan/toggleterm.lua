@@ -8,7 +8,9 @@ toggleterm.setup({
 	direction = "float",
 	on_open = function(term)
 		vim.cmd("startinsert!")
-		U.make_key({ noremap = true, buffer = term.bufnr, silent = true })("n", "q", U.make_cmd("close"))
+		U.make_key({ noremap = true, buffer = term.bufnr, silent = true })("n", "<c-\\>", U.make_cmd("close"))
+		U.make_key({ noremap = true, buffer = term.bufnr, silent = true })("t", "<c-\\>", U.make_cmd("close"))
+		U.make_key({ noremap = true, buffer = term.bufnr, silent = true })("t", "<c-|>", U.make_cmd("close"))
 	end,
 	float_opts = {
 		border = "curved",

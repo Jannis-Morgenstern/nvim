@@ -83,7 +83,7 @@ set_keys.lsp = function(bufnr)
 	_key("n", "ga", U.make_cmd("CodeActionMenu"))
 end
 
-key("n", "<leader>tt", toggleterm.toggleDefault)
-key("n", "<leader>tl", toggleterm.toggleLazygit)
+key("n", "<c-\\>", toggleterm.toggleDefault)
+key("n", "<c-|>", toggleterm.toggleLazygit)
 
 return { set_keys = set_keys }
