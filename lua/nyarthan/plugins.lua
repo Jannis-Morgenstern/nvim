@@ -98,6 +98,7 @@ return packer.startup(function(use)
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
+  use("ThePrimeagen/git-worktree.nvim")
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")
