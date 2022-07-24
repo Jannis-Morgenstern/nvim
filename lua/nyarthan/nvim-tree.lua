@@ -44,10 +44,6 @@ nvim_tree.setup({
 		ignore = true,
 		timeout = 500,
 	},
-	filesystem_watchers = {
-		enable = true,
-		interval = 100,
-	},
 	view = {
 		adaptive_size = false,
 		centralize_selection = true,
