@@ -86,6 +86,6 @@ set_keys.lsp = function(bufnr)
 end
 
 key("n", "<c-\\>", toggleterm.toggleDefault)
-key("n", "<c-|>", toggleterm.toggleLazygit)
+key("n", "<c-s-\\>", toggleterm.toggleLazygit)
 
 return { set_keys = set_keys }
