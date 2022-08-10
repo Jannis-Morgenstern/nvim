@@ -45,8 +45,8 @@ key("x", "<a-k>", U.make_cmd("move '<-2<CR>gv-gv"))
 
 key("n", "<leader>f", U.make_cmd("Telescope find_files"))
 key("n", "<c-t>", U.make_cmd("Telescope live_grep"))
-key("n", "<leader>gB", require('telescope').extensions.git_worktree.create_git_worktree)
-key("n", "<leader>gb", require('telescope').extensions.git_worktree.git_worktrees)
+key("n", "<leader>gB", require("telescope").extensions.git_worktree.create_git_worktree)
+key("n", "<leader>gb", require("telescope").extensions.git_worktree.git_worktrees)
 
 -- NvimTree
 key("n", "<leader>r", U.make_cmd("NvimTreeRefresh"))
@@ -82,7 +82,7 @@ set_keys.lsp = function(bufnr)
 	_key("n", "gnd", vim.diagnostic.goto_next)
 	_key("n", "gNd", vim.diagnostic.goto_prev)
 	_key("n", "gl", vim.diagnostic.open_float)
-	_key("n", "ga", U.make_cmd("CodeActionMenu"))
+	_key("n", "ga", vim.lsp.buf.code_action)
 end
 
 key("n", "<c-\\>", toggleterm.toggleDefault)

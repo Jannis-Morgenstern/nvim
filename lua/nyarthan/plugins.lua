@@ -68,10 +68,6 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp")
 	use("onsails/lspkind.nvim")
 	use("f3fora/cmp-spell")
-	use({
-		"weilbith/nvim-code-action-menu",
-		cmd = "CodeActionMenu",
-	})
 	use("folke/trouble.nvim")
 	use({
 		"ray-x/lsp_signature.nvim",
