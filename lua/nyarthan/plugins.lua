@@ -47,6 +47,7 @@ return packer.startup(function(use)
 	-- Misc
 	use("windwp/nvim-autopairs")
 	use("kyazdani42/nvim-web-devicons")
+	use("stevearc/dressing.nvim")
 
 	-- File Explorer
 	use("kyazdani42/nvim-tree.lua")
@@ -98,7 +99,7 @@ return packer.startup(function(use)
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
-  use("ThePrimeagen/git-worktree.nvim")
+	use("ThePrimeagen/git-worktree.nvim")
 
 	-- Bufferline
 	use("akinsho/bufferline.nvim")

@@ -26,3 +26,5 @@ end
 U.make_cmd = function(cmd)
 	return U.bind(U.nv_cmd, cmd)
 end
+
+U.noop = function() end
