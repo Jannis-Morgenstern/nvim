@@ -33,6 +33,11 @@ packer.init({
 })
 
 return packer.startup(function(use)
+	-- Local
+	-- use("~/dev/private/nvim-plugins/telescope-code-actions.nvim")
+	use("nyarthan/telescope-code-actions.nvim")
+	use("~/dev/private/nvim-plugins/lsp-notify.nvim")
+
 	-- Package Manager
 	use("wbthomason/packer.nvim")
 
@@ -48,6 +53,7 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("kyazdani42/nvim-web-devicons")
 	use("stevearc/dressing.nvim")
+	use("rcarriga/nvim-notify")
 
 	-- File Explorer
 	use("kyazdani42/nvim-tree.lua")
