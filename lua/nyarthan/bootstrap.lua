@@ -12,6 +12,6 @@ if fn.empty(fn.glob(packer_path)) > 0 then
 end
 
 vim.g["aniseed#env"] = {
-	module = "config.init",
+	module = "fennel.init",
 	compile = true,
 }
