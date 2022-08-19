@@ -1,8 +1,10 @@
+require("nyarthan.bootstrap")
+
+require("nyarthan.plugins")
 require("nyarthan.impatient")
 require("nyarthan.utils")
 require("nyarthan.options")
 require("nyarthan.keymaps")
-require("nyarthan.plugins")
 require("nyarthan.colorscheme")
 require("nyarthan.cmp")
 require("nyarthan.lsp")
