@@ -41,7 +41,7 @@ telescope.setup({
 				["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
 				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 				["<C-l>"] = actions.complete_tag,
-				["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+				["<C-_>"] = actions.which_key,
 			},
 
 			n = {
@@ -87,13 +87,10 @@ telescope.setup({
 		-- builtin picker
 	},
 	extensions = {
-		-- Your extension configuration goes here:
-		-- extension_name = {
-		--   extension_config_key = value,
-		-- }
-		-- please take a look at the readme of the extension you want to configure
+		["git_worktree"] = {},
+		["telescope-code-actions"] = {},
 	},
 })
 
-telescope.load_extensions("git_worktree")
-telescope.load_extensions("telescope-code-actions")
+-- telescope.load_extensions("git_worktree")
+-- telescope.load_extensions("telescope-code-actions")

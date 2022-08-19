@@ -34,8 +34,7 @@ packer.init({
 
 return packer.startup(function(use)
 	-- Local
-	-- use("~/dev/private/nvim-plugins/telescope-code-actions.nvim")
-	use("nyarthan/telescope-code-actions.nvim")
+	use("~/dev/private/nvim-plugins/telescope-code-actions.nvim")
 	use("~/dev/private/nvim-plugins/lsp-notify.nvim")
 
 	-- Package Manager
