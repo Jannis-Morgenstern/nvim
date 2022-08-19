@@ -4,3 +4,4 @@
                                str aniseed.string}})
 
 (require :fennel.plugins)
+(require :fennel.autopairs)
