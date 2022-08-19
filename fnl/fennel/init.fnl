@@ -6,3 +6,4 @@
 (require :fennel.plugins)
 (require :fennel.autopairs)
 (require :fennel.icons)
+(require :fennel.lsp)
