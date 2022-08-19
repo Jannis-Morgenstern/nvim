@@ -4,5 +4,4 @@
              util config.util
              str aniseed.string}})
 
-(print
-  (vim.inspect [1 2]))
+(require :fennel.plugins)
