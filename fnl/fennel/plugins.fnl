@@ -83,6 +83,7 @@
   :nvim-treesitter/nvim-treesitter {"run" ":TSUpdate"}
   :windwp/nvim-ts-autotag {}
   :p00f/nvim-ts-rainbow {}
+  :nvim-treesitter/nvim-treesitter-context {}
 
   ; git
   :lewis6991/gitsigns.nvim {}
