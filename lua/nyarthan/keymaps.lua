@@ -7,6 +7,12 @@ local key = U.make_key({ noremap = true, silent = true })
 
 key("", "<space>", "<nop>")
 
+-- Insert Mode
+key("i", "<c-h>", "<left>")
+key("i", "<c-j>", "<down>")
+key("i", "<c-k>", "<up>")
+key("i", "<c-l>", "<right>")
+
 -- Split navigation
 key("n", "<c-h>", "<c-w>h")
 key("n", "<c-j>", "<c-w>j")
@@ -20,7 +26,7 @@ key("n", "<leader>e", U.make_cmd("NvimTreeToggle"))
 key("n", "<c-up>", U.make_cmd("resize +2"))
 key("n", "<c-down>", U.make_cmd("resize -2"))
 key("n", "<c-left>", U.make_cmd("vertical resize -2"))
-key("n", "<c-Right>", U.make_cmd("vertical resize +2"))
+key("n", "<c-right>", U.make_cmd("vertical resize +2"))
 
 -- buffers
 key("n", "<s-l>", U.make_cmd("bnext"))
