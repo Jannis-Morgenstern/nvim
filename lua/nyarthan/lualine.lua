@@ -1,28 +1,37 @@
-require("lualine").setup({
+local ok, lualine = pcall(require, "lualine")
+if not ok then
+	vim.notify("Error loading module: lualine")
+	return
+end
+
+local components = {
+	progress = function()
+		local cur = vim.fn.line(".")
+		local total = vim.fn.line("$")
+		if cur == 1 then
+			return U.left_pad("Top", 3)
+		elseif cur == total then
+			return U.left_pad("Bot", 3)
+		else
+			return U.left_pad(math.floor(cur / total * 100) .. "%%", 4)
+		end
+	end,
+}
+
+lualine.setup({
 	options = {
 		icons_enabled = true,
 		theme = "auto",
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
-		disabled_filetypes = {},
-		always_divide_middle = true,
+		section_separators = "",
+		component_separators = "|",
+		globalstatus = true,
 	},
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = { "branch", "diff", "diagnostics" },
 		lualine_c = { "filename" },
-		lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_y = { "progress" },
+		lualine_x = { "encoding", "filetype" },
+		lualine_y = { components.progress },
 		lualine_z = { "location" },
 	},
-	inactive_sections = {
-		lualine_a = {},
-		lualine_b = {},
-		lualine_c = { "filename" },
-		lualine_x = { "location" },
-		lualine_y = {},
-		lualine_z = {},
-	},
-	tabline = {},
-	extensions = {},
 })

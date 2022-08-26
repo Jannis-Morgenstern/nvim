@@ -27,4 +27,8 @@ U.make_cmd = function(cmd)
 	return U.bind(U.nv_cmd, cmd)
 end
 
+U.left_pad = function(str, length, char)
+	return string.rep(char or " ", length - #str) .. str
+end
+
 U.noop = function() end
