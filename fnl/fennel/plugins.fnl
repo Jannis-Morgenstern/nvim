@@ -77,6 +77,7 @@
   :j-hui/fidget.nvim {}
   :kosayoda/nvim-lightbulb {}
   :ray-x/lsp_signature.nvim {}
+  :smjonas/inc-rename.nvim {}
 
   ; treesitter
   :nvim-treesitter/nvim-treesitter {"run" ":TSUpdate"}
