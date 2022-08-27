@@ -78,6 +78,7 @@
   :kosayoda/nvim-lightbulb {}
   :ray-x/lsp_signature.nvim {}
   :smjonas/inc-rename.nvim {}
+  :weilbith/nvim-code-action-menu {"cmd" "CodeActionMenu"}
 
   ; treesitter
   :nvim-treesitter/nvim-treesitter {"run" ":TSUpdate"}
