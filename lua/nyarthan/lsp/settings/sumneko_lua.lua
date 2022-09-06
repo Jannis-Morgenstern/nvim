@@ -8,7 +8,7 @@ return {
 				library = {
 					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
 					[vim.fn.stdpath("config") .. "/lua"] = true,
-					[vim.fn.stdpath("data") .. "/site/pack/packer/start"] = true,
+					-- [vim.fn.stdpath("data") .. "/site/pack/packer/start"] = true,
 					[os.getenv("HOME") .. "/dev/private/nvim-plugins"] = true,
 				},
 			},
