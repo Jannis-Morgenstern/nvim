@@ -88,11 +88,12 @@ set_keys.lsp = function(bufnr)
 	_key("n", "gnd", vim.diagnostic.goto_next)
 	_key("n", "gNd", vim.diagnostic.goto_prev)
 	_key("n", "gl", vim.diagnostic.open_float)
-	_key(
-		"n",
-		"ga",
-		U.bind(require("telescope").extensions.code_actions.code_actions, require("telescope.themes").get_cursor({}))
-	)
+	-- _key(
+	-- 	"n",
+	-- 	"ga",
+	-- 	U.bind(require("telescope").extensions.code_actions.code_actions, require("telescope.themes").get_cursor({}))
+	-- )
+	_key("n", "ga", vim.lsp.buf.code_action)
 end
 
 key("n", "<c-\\>", toggleterm.toggleDefault)

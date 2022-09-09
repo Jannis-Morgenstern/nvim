@@ -5,3 +5,6 @@ if not ok then
 end
 
 rename.setup()
+
+local a = 1
+print(a)
