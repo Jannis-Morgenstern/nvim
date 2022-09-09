@@ -49,7 +49,6 @@ local plugins = {
 
 	-- lsp
 	"neovim/nvim-lspconfig",
-	"williamboman/nvim-lsp-installer",
 	"jose-elias-alvarez/null-ls.nvim",
 	"folke/lsp-colors.nvim",
 	"j-hui/fidget.nvim",
@@ -58,6 +57,8 @@ local plugins = {
 	"smjonas/inc-rename.nvim",
 	{ "weilbith/nvim-code-action-menu", { cmd = "CodeActionMen" } },
 	"simrat39/rust-tools.nvim",
+	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
 
 	-- treesitter
 	{ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdat" } },

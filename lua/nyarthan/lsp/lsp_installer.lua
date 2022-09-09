@@ -1,16 +1,4 @@
-local installer = require("nvim-lsp-installer")
 local handlers = require("nyarthan.lsp.handlers")
-
-installer.setup({
-	automatic_installation = true,
-	ui = {
-		icons = {
-			server_installed = "✓",
-			server_pending = "➜",
-			server_uninstalled = "✗",
-		},
-	},
-})
 
 local servers = {
 	"cssls",
