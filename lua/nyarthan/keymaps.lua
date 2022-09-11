@@ -48,7 +48,6 @@ key("x", "<a-j>", U.make_cmd("move '>+1<CR>gv-gv"))
 key("x", "<a-k>", U.make_cmd("move '<-2<CR>gv-gv"))
 
 -- Telescope
-
 key("n", "<leader>f", U.make_cmd("Telescope find_files"))
 key("n", "<c-t>", U.make_cmd("Telescope live_grep"))
 key("n", "<leader>gB", require("telescope").extensions.git_worktree.create_git_worktree)
@@ -61,6 +60,8 @@ key("n", "<leader>r", U.make_cmd("NvimTreeRefresh"))
 key("n", "<leader>bp", U.make_cmd("BufferLinePick"))
 
 key("n", "<leader>rr", U.make_cmd("luafile %"))
+
+key("n", "<leader>p", U.make_cmd('"_dP'))
 
 local set_keys = {}
 
