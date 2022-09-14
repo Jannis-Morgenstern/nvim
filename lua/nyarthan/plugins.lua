@@ -54,7 +54,6 @@ local plugins = {
 	"j-hui/fidget.nvim",
 	"kosayoda/nvim-lightbulb",
 	"ray-x/lsp_signature.nvim",
-	"smjonas/inc-rename.nvim",
 	{ "weilbith/nvim-code-action-menu", { cmd = "CodeActionMen" } },
 	"simrat39/rust-tools.nvim",
 	"williamboman/mason.nvim",
