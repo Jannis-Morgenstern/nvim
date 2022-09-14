@@ -12,6 +12,7 @@ local servers = {
 	"bashls",
 	"rust_analyzer",
 	"taplo",
+	"eslint",
 }
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
