@@ -93,4 +93,4 @@ telescope.setup({
 })
 
 -- telescope.load_extensions("git_worktree")
--- telescope.load_extensions("telescope-code-actions")
+-- telescope.load_extension("telescope-code-actions")
