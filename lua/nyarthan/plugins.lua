@@ -58,7 +58,6 @@ packer.startup(function(use)
   use('simrat39/rust-tools.nvim')
   use('williamboman/mason.nvim')
   use('williamboman/mason-lspconfig.nvim')
-  use('lukas-reineke/lsp-format.nvim')
 
   -- treesitter
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdat' })
