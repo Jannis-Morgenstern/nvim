@@ -1,8 +1,8 @@
-local notify = require("notify")
+local notify = require('notify')
 
 vim.notify = notify
 
 notify.setup({
-	fps = 60,
-	stages = "slide",
+  fps = 60,
+  stages = 'slide',
 })

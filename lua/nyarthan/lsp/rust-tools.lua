@@ -1,1 +1,1 @@
-local rust_tools = require("rust-tools")
+local rust_tools = require('rust-tools')

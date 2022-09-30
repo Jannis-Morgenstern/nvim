@@ -1,3 +1,3 @@
-local worktree = require("git-worktree")
+local worktree = require('git-worktree')
 
 worktree.setup({})

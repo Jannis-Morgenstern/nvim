@@ -1,3 +1,3 @@
-local fidget = require("fidget")
+local fidget = require('fidget')
 
 fidget.setup({})
